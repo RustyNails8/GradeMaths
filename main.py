@@ -54,8 +54,9 @@ def main():
 2. Find LCM of the numbers
 3. Find HCF of the numbers
 4. Find product of the numbers
-5. Enter two new numbers
-6. Exit
+5. Find factors, LCM, HCF and products
+6. Enter two new numbers
+7. Exit
         """
         console.print(Panel(menu, title="[bold blue]Menu[/bold blue]", expand=False))
 
@@ -63,15 +64,25 @@ def main():
 
         if choice == '1':
             console.print(Panel(f"The factors of {num1} are: {find_factors(num1)}\nThe factors of {num2} are: {find_factors(num2)}", title="[bold green]Factors[/bold green]"))
+            input("Press Enter to continue...")
         elif choice == '2':
             console.print(Panel(f"The LCM of {num1} and {num2} is: {find_lcm(num1, num2)}", title="[bold green]LCM[/bold green]"))
+            input("Press Enter to continue...")
         elif choice == '3':
             console.print(Panel(f"The HCF of {num1} and {num2} is: {find_hcf(num1, num2)}", title="[bold green]HCF[/bold green]"))
+            input("Press Enter to continue...")
         elif choice == '4':
             console.print(Panel(f"The product of {num1} and {num2} is: {find_product(num1, num2)}", title="[bold green]Product[/bold green]"))
+            input("Press Enter to continue...")
         elif choice == '5':
-            num1, num2 = get_numbers()
+            console.print(Panel(f"The factors of {num1} are: {find_factors(num1)}\nThe factors of {num2} are: {find_factors(num2)}", title="[bold green]Factors[/bold green]"))
+            console.print(Panel(f"The LCM of {num1} and {num2} is: {find_lcm(num1, num2)}", title="[bold green]LCM[/bold green]"))
+            console.print(Panel(f"The HCF of {num1} and {num2} is: {find_hcf(num1, num2)}", title="[bold green]HCF[/bold green]"))
+            console.print(Panel(f"The product of {num1} and {num2} is: {find_product(num1, num2)}", title="[bold green]Product[/bold green]"))
+            input("Press Enter to continue...")
         elif choice == '6':
+            num1, num2 = get_numbers()
+        elif choice == '7':
             print("[bold yellow]Exiting...[/bold yellow]")
             break
         else:
